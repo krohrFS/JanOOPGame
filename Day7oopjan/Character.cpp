@@ -24,7 +24,8 @@ public:
 
 		//std::cout << "Default character made" << std::endl;
 
-		ChangeName();
+		/*ChangeName();
+		std::cout << "new name: " << name << std::endl;*/
 
 		// Save teh character when made
 		SaveCharacter();
@@ -39,7 +40,7 @@ public:
 		damage = 3;
 
 		// save the character when made
-		SaveCharacter();
+		//SaveCharacter();
 	}
 
 
@@ -126,9 +127,19 @@ public:
 		}
 	}
 
+	// Break until 3:35 pm est
+	/*
+		Question: Question about discord. At end of month is there a bot that removes our roles automatically
+		or do we just have to wait for the role to be removed?
+		Answer: I believe the #select-your-role channel operates as a toggle - i.e if you reselect pg1 I think it removes your 
+		role. It should be something you handle I believe
+	*/
+
+
+	// TODO: FIX THIS LATER
 	void SaveCharacter()
 	{
-		std::ofstream file("pc.txt");
+		std::ofstream file("pc.txt", std::ios::out);
 
 		file << name << std::endl;
 		file << currentHp << std::endl;
