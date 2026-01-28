@@ -1,6 +1,7 @@
 #include "Character.h"
 #include <iostream>
 #include <string>
+#include <fstream>
 #pragma once
 
 class Character
@@ -22,6 +23,9 @@ public:
 		damage = 3;
 
 		//std::cout << "Default character made" << std::endl;
+
+		// Save teh character when made
+		SaveCharacter();
 	}
 
 	// Overloaded constructor
@@ -32,6 +36,8 @@ public:
 		currentHp = 10;
 		damage = 3;
 
+		// save the character when made
+		SaveCharacter();
 	}
 
 
@@ -81,6 +87,19 @@ public:
 	void SetToMaxHP()
 	{
 		currentHp = maxHp;
+	}
+
+	void SaveCharacter()
+	{
+		std::ofstream file("pc.txt");
+
+		file << name << std::endl;
+		file << currentHp << std::endl;
+		file << maxHp << std::endl;
+		file << damage << std::endl;
+
+		file.close();
+		
 	}
 
 };

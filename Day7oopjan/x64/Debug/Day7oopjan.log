@@ -1,13 +1,4 @@
-﻿  Bag.cpp
-  Character.cpp
-  CLInotes.cpp
-  Combat.cpp
+﻿  Character.cpp
   Day7oopjan.cpp
-  GameEngine.cpp
-  GameObject.cpp
-  Menu.cpp
-  Monster.cpp
-  NewExample.cpp
-  Person.cpp
   Generating Code...
   Day7oopjan.vcxproj -> C:\Users\krohr\source\repos\Day7oopjan\x64\Debug\Day7oopjan.exe

@@ -142,7 +142,8 @@ void Pause()
     std::cin.get();
 }
 
-int main()
+
+void WednesdayExamples()
 {
     // Create an instance of the NewExample class
     // i.e creating an object of the NewExample class
@@ -157,7 +158,7 @@ int main()
     //nExample.
 
     // Now that we have two publically available methods we can use the . operator to see the menu and choose a method
-    std::cout << "nExample Name Field: " << nExample.GetName() <<std::endl;
+    std::cout << "nExample Name Field: " << nExample.GetName() << std::endl;
 
     nExample.SetName("Steve");
 
@@ -181,7 +182,7 @@ int main()
     Line();
 
     myNewExample.ReadFile();
-    
+
     Line();
     myNewExample.WriteFile();
     myNewExample.ReadFile();
@@ -193,9 +194,11 @@ int main()
 
     Line();
     Pause();
-    GameEngine game;
+}
 
 
+void Day8()
+{
     Pause();
     Message("Welcome to Day 7 OOP - Object Oriented Programming");
 
@@ -259,7 +262,7 @@ int main()
     // Create instance of our class we make in this file
    // pattern 
     // ClassName objectName;
-    
+
     Example myExample;
 
     //int x;
@@ -267,7 +270,7 @@ int main()
     // Call some methods from it
     myExample.Greeting();
     Line();
-    myExample.Sum(2,2); // note just like our regular sum method from day 3 and the review this method has a return, but it is being called from the object. Currently
+    myExample.Sum(2, 2); // note just like our regular sum method from day 3 and the review this method has a return, but it is being called from the object. Currently
     // we have no where to store the returned value of 4 so it is lost, we would need to set up a variable to store it either in the class itself or in the main - if we set up a variable for that in the class 
     // it would just be easier to do all of that in the class - but for this example we'er going to create an int in the main and store it
     int capturedReturn = myExample.Sum(2, 2);
@@ -278,17 +281,17 @@ int main()
     Line();
 
     // Create instance of class from another file - note that we need to include the other files we make at the top to use them in this file
-    Person myPerson; 
+    Person myPerson;
 
     // call some methods from it
     myPerson.Greeting();
- 
+
 
     // Now add some fields
 
     // Dot operator to show they're not available
     // myPerson.
-    
+
     // Now getters and setters
     std::cout << "name: " << myPerson.GetName() << std::endl;
     std::cout << "age: " << myPerson.GetAge() << std::endl;
@@ -329,7 +332,7 @@ int main()
 
     // Make a class a field - Put the bag class as field in Person
 
-    
+
     myPerson.AddItemToBag();
 
     myPerson.DisplayBag();
@@ -352,7 +355,7 @@ int main()
     Line();
 
     // Go through creating an object via a loop and user input
-    
+
 
     // prompt the user for a number of people
     std::cout << "How many person objects would you like to make" << std::endl;
@@ -391,10 +394,22 @@ int main()
     {
         std::cout << "Name of person at position - " << i << ": " << people[i].GetName() << std::endl;
     }
-    
+
+}
+
+int main()
+{
+    // Uncomment to see examples
+    // WednesdayExamples();
+
+
+    // Uncomment to see Day 8 examples
+   // Day8();
+
+
+    // comment out if you don't want to see teh game examples
+    GameEngine game;
 
 
 
-
-    
 }
