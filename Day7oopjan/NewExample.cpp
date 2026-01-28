@@ -3,6 +3,10 @@
 #include <iostream>
 #include <vector>
 
+// Note this is for future use not for lab 7 or the final just something to see
+#include <fstream>
+
+
 
 class NewExample
 {
@@ -74,6 +78,43 @@ public: // anything above is private and not usable natively by other files, and
 	{
 		// goal is to alter name's value
 		name = newValue;
+	}
+
+
+	void ReadFile()
+	{
+		// ifstream is for reading
+		std::ifstream readFile("test.txt");
+		std::string line = ""; // initialize a string variable to read the file line by line
+
+		while (std::getline(readFile, line))
+		{
+			std::cout << line << std::endl;
+		}
+
+		readFile.close(); // closes the file
+	}
+
+	void WriteFile()
+	{
+		// ofstream is for writing
+		std::ofstream file("test.txt"); // if we leave this alone what will happen is the file will be overwritten
+
+		file << "start of new file" << std::endl;
+
+		file.close(); // closes the file
+	}
+
+
+	void AppendFile()
+	{
+		std::ofstream file("test.txt", std::ios::app);
+
+		file << "this will be appended" << std::endl;
+
+		file.close();
+
+
 	}
 
 

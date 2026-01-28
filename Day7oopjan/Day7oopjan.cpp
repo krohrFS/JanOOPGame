@@ -180,7 +180,18 @@ int main()
 
     Line();
 
+    myNewExample.ReadFile();
+    
+    Line();
+    myNewExample.WriteFile();
+    myNewExample.ReadFile();
 
+    Line();
+    myNewExample.AppendFile();
+    myNewExample.ReadFile();
+
+
+    Line();
     Pause();
     GameEngine game;
 
