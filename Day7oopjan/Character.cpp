@@ -135,11 +135,11 @@ public:
 		role. It should be something you handle I believe
 	*/
 
-
+	
 	// TODO: FIX THIS LATER
 	void SaveCharacter()
 	{
-		std::ofstream file("pc.txt", std::ios::out);
+		std::ofstream file("pc.txt", std::ios::app);
 
 		file << name << std::endl;
 		file << currentHp << std::endl;
