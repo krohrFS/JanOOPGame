@@ -4,6 +4,9 @@
 // Includes for our files we make
 #include "Person.cpp"
 #include "GameEngine.cpp"
+#include "NewExample.cpp" // even though it is in the same project and it is something we made
+// we still need to include it in this file to use it
+
 
 
 
@@ -141,7 +144,44 @@ void Pause()
 
 int main()
 {
+    // Create an instance of the NewExample class
+    // i.e creating an object of the NewExample class
+    // pattern is
+    // ClassName identifier; 
+    NewExample nExample; // when we don't provide () to a constructor call that means we are calling the default
+    // constructor (at least in this language)
 
+
+    // When using an object to call methods we use the . (dot) operator to bring up a context menu or drop down of
+    // all publically available methods for the class, currently we don't have anything so we won't get that menu
+    //nExample.
+
+    // Now that we have two publically available methods we can use the . operator to see the menu and choose a method
+    std::cout << "nExample Name Field: " << nExample.GetName() <<std::endl;
+
+    nExample.SetName("Steve");
+
+    std::cout << "nExample Name Field: " << nExample.GetName() << std::endl;
+
+    std::string newName = "Bob";
+
+    nExample.SetName(newName);
+
+    std::cout << "nExample Name Field: " << nExample.GetName() << std::endl;
+
+    // Break until 2:30 pm est
+
+    Line();
+    NewExample exampleObject(newName);
+    std::cout << "exampleObject field name: " << exampleObject.GetName() << std::endl;
+
+    NewExample myNewExample("Jake");
+    std::cout << "myNewExample field name: " << myNewExample.GetName() << std::endl;
+
+    Line();
+
+
+    Pause();
     GameEngine game;
 
 

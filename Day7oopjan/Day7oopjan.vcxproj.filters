@@ -45,6 +45,9 @@
     <ClCompile Include="CLInotes.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="NewExample.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Person.h">
@@ -72,6 +75,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CLInotes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NewExample.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
