@@ -24,6 +24,8 @@ public:
 
 		//std::cout << "Default character made" << std::endl;
 
+		ChangeName();
+
 		// Save teh character when made
 		SaveCharacter();
 	}
@@ -89,6 +91,41 @@ public:
 		currentHp = maxHp;
 	}
 
+
+
+	void ChangeName()
+	{
+		// Prompt the user if they want to change the name of their character
+		std::cout << "Do you want to change your name, " << name << " - yes if you do" << std::endl;
+
+		// collect user input
+		std::string userInput = "";
+		getline(std::cin, userInput); // forgot to add this initially
+
+		// force userinput to be lower
+		for (int i = 0; i < userInput.size(); i++)
+		{
+			userInput[i] = tolower(userInput[i]);
+		}
+
+		// check if they do
+		if (userInput == "yes")
+		{
+			// if they do prompt the name
+			std::cout << "What would you like to be called?" << std::endl;
+			// store the name
+			getline(std::cin, userInput);
+
+			// and set the name field
+			name = userInput;
+
+			std::cout << "Greetings, " << name << std::endl;
+
+			SaveCharacter();
+
+		}
+	}
+
 	void SaveCharacter()
 	{
 		std::ofstream file("pc.txt");
@@ -99,7 +136,7 @@ public:
 		file << damage << std::endl;
 
 		file.close();
-		
+
 	}
 
 };
