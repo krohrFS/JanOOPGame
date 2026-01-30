@@ -8,6 +8,24 @@
 
 #pragma once
 
+/*
+	Welcome to the final day of pg1
+
+	Due today at 11:59 pm Lab 7 and the Final project
+
+	Grading will be finished by Sunday evening.
+
+	We'll be taking a moment to fix the save issue and then move on to review with a fresh project
+
+	We'll get started at 1:15pm est
+
+
+
+
+
+
+*/
+
 
 enum Options
 {
@@ -32,7 +50,7 @@ public:
 	GameObject DisplayMenu(GameObject gameObject) // possible GameObject parameter here
 	{
 		// We need menu options to display
-		Character tav;
+		Character tav(gameObject.GetMyCharacter().GetName()); // change this
 		Combat myCombat;
 
 		tav = gameObject.GetMyCharacter();

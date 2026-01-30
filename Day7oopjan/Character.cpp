@@ -136,10 +136,10 @@ public:
 	*/
 
 	
-	// TODO: FIX THIS LATER
+	// TODO: FIX THIS LATER - changed to app and we see that SaveCharacter is getting ran a 3rd time somewhere
 	void SaveCharacter()
 	{
-		std::ofstream file("pc.txt", std::ios::app);
+		std::ofstream file("pc.txt");
 
 		file << name << std::endl;
 		file << currentHp << std::endl;
